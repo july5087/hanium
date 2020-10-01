@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1">
+        <TextView
+            android:id="@+id/textViewStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="문장을 입력하고 아래 이미지 버튼을 눌러주세요."
+            android:maxLines="1"/>
+
+        <EditText
+            android:id="@+id/editTextTTS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textViewStatus"
+            android:layout_below="@+id/textViewStatus"
+            android:layout_marginTop="20dp"
+            android:text="속도 테스트 음성입니다"
+            android:inputType="textMultiLine"
+            android:maxLines="1"/>
+
+        <ImageButton
+            android:id="@+id/imageButtonStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="음성으로 말하기"
+            android:scaleType="fitCenter" />
+            <!--android:src="@drawable/speak_icon1"-->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/speedSelectWrap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageButtonStart"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:id="@+id/speedSelectTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/speed_select_title" />
+
+        <RadioGroup
+            android:id="@+id/speedRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/speedSelectTitle"
+            android:layout_gravity="left"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/speed05x"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0.5x" />
+
+            <RadioButton
+                android:id="@+id/speed10x"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="1.0x" />
+
+            <RadioButton
+                android:id="@+id/speed20x"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="2.0x" />
+        </RadioGroup>
+    </LinearLayout>
+</LinearLayout>
